@@ -1,0 +1,80 @@
+/*
+ * PROJ1-1: YOUR TASK A CODE HERE
+ *
+ * Feel free to define additional helper functions.
+ */
+
+#include "calc_depth.h"
+#include "utils.h"
+#include <math.h>
+#include <limits.h>
+#include <stdio.h>
+
+/* Implements the normalized displacement function */
+unsigned char normalized_displacement(int dx, int dy,
+        int maximum_displacement) {
+
+    double squared_displacement = dx * dx + dy * dy;
+    double normalized_displacement = round(255 * sqrt(squared_displacement) / sqrt(2 * maximum_displacement * maximum_displacement));
+    return (unsigned char) normalized_displacement;
+
+}
+
+/* Checks if index is in the width */
+int width_is_in_image(int x, int image_width){
+    return x > 0 && x < image_width;
+}
+
+/* Checks if index is in the height */
+int height_is_in_image(int x, int image_height){
+    return x > 0 && x < image_height;
+}
+
+/* Converts (x, y) of 2-D array to index in 1-D array */
+int twod_oned(int row, int col, int width) {
+  return row*width + col;
+}
+void calc_depth(unsigned char *depth_map, unsigned char *left,
+        unsigned char *right, int image_width, int image_height,
+        int feature_width, int feature_height, int maximum_displacement) {
+
+    /* YOUR CODE HERE */
+    /*
+    1. Create feature box for left image for a given pixel
+    2. Create search space in right image
+    3. Create feature box for right image and loop through search space
+    4. Locate the most similar feature in right image
+    5. Calculate normalized displacement of left-right pixel
+    6. Store normalized displacement value in appropriate location of depth map  
+    7. Repeat 1-6 for every pixel in left image. 
+    */
+
+    unsigned char feature_left [2*feature_width + 1][2*feature_height + 1];
+    //outer loop that loops through left image
+    for(int i = 0; i<image_width*image_height; i++) {
+        
+
+
+
+
+
+        
+
+        //loop for width of feature
+        for(int k = (i / image_height) - feature_height; k <(i / image_height) + feature_height; k++){
+            //loop for height of feature
+            for(int j = (i % image_width) - feature_width; j <(i % image_width) + feature_width; j++){
+                printf("i, %d j, %d\n",i,j);
+                //if the feature cell is in the image, assign value
+                if(width_is_in_image(j, image_width) && height_is_in_image(k, image_height)){
+                    feature_left[j][k] = left[twod_oned(j, k, image_width)];
+                }
+                //if feature cell is not in image, assign 0
+                else{
+                    feature_left[j][k] = 0;
+                }
+            }
+        }
+
+    }
+}

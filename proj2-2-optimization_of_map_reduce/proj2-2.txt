@@ -1,0 +1,32 @@
+medium 12 slaves
+master: ec2-23-23-54-221.compute-1.amazonaws.com  
+time 1: 1:29.72
+-rw-r--r--   3 root supergroup    2070453 2014-11-01 19:52 /user/root/medium-puzzle-out/part-00000
+-rw-r--r--   3 root supergroup    2070453 2014-11-01 19:52 /user/root/medium-puzzle-out/part-00001
+-rw-r--r--   3 root supergroup    2070483 2014-11-01 19:52 /user/root/medium-puzzle-out/part-00002
+-rw-r--r--   3 root supergroup    2070469 2014-11-01 19:52 /user/root/medium-puzzle-out/part-00003
+-rw-r--r--   3 root supergroup    2070480 2014-11-01 19:52 /user/root/medium-puzzle-out/part-00004
+-rw-r--r--   3 root supergroup    2070502 2014-11-01 19:52 /user/root/medium-puzzle-out/part-00005
+-rw-r--r--   3 root supergroup    2070469 2014-11-01 19:52 /user/root/medium-puzzle-out/part-00006
+-rw-r--r--   3 root supergroup    2070477 2014-11-01 19:52 /user/root/medium-puzzle-out/part-00007
+-rw-r--r--   3 root supergroup    2070489 2014-11-01 19:52 /user/root/medium-puzzle-out/part-00008
+-rw-r--r--   3 root supergroup    2070475 2014-11-01 19:52 /user/root/medium-puzzle-out/part-00009
+-rw-r--r--   3 root supergroup    2070489 2014-11-01 19:52 /user/root/medium-puzzle-out/part-00010
+-rw-r--r--   3 root supergroup    2070511 2014-11-01 19:52 /user/root/medium-puzzle-out/part-00011
+
+large 12 slaves
+master: ec2-23-23-54-221.compute-1.amazonaws.com
+time 1: 46:28.81
+-rw-r--r--   3 root supergroup  314704613 2014-11-01 20:42 /user/root/large-puzzle-out/part-00000
+-rw-r--r--   3 root supergroup  314704655 2014-11-01 20:42 /user/root/large-puzzle-out/part-00001
+-rw-r--r--   3 root supergroup  314704709 2014-11-01 20:42 /user/root/large-puzzle-out/part-00002
+-rw-r--r--   3 root supergroup  314704673 2014-11-01 20:42 /user/root/large-puzzle-out/part-00003
+-rw-r--r--   3 root supergroup  314704690 2014-11-01 20:42 /user/root/large-puzzle-out/part-00004
+-rw-r--r--   3 root supergroup  314704718 2014-11-01 20:42 /user/root/large-puzzle-out/part-00005
+-rw-r--r--   3 root supergroup  314704682 2014-11-01 20:42 /user/root/large-puzzle-out/part-00006
+-rw-r--r--   3 root supergroup  314704720 2014-11-01 20:42 /user/root/large-puzzle-out/part-00007
+-rw-r--r--   3 root supergroup  314704755 2014-11-01 20:42 /user/root/large-puzzle-out/part-00008
+-rw-r--r--   3 root supergroup  314704667 2014-11-01 20:42 /user/root/large-puzzle-out/part-00009
+-rw-r--r--   3 root supergroup  314704690 2014-11-01 20:42 /user/root/large-puzzle-out/part-00010
+-rw-r--r--   3 root supergroup  314704751 2014-11-01 20:42 /user/root/large-puzzle-out/part-00011
+

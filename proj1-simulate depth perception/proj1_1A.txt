@@ -1,0 +1,9 @@
+Fill in your answers here.
+
+1.The algorithm identifies the sticky note reasonably well as it is clearly discernible against the background. However, the algorithm does mistakenly identify other things as closeby as well. We think this is because of:
+	a)The squared euclidean distance algorithm calculates the distance based on the values of the pixels at location (x,y). The value of a pixel is nothing but its color (0-255) and hence, the algorithm mistakenly identifies objects of the same color as similar even though they may not be closeby.
+	b)The larger the search space, the more there is a margin for error in terms of mistakenly identifying other things as similar.
+
+2. The algorithm works better on the real2 images as compared to the real1 images. The search and feature dimensions for both images is the same, however, real2 is bigger than real1, so the greater pixel density for a given area in real2 accounts for the better clarity and contrast of real2.
+
+3. The output images become more blurry as we increase the size of the feature. This happens because the focus of the feature becomes spread out instead of concentrated on fewer pixels. Because of the bigger feature area, there is more chance of finding erroneous patterns which won’t be found with a more specific feature space.

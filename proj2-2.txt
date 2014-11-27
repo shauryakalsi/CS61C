@@ -1,0 +1,32 @@
+1) 
+
+Run time for 5 x 2 (ec2-medium) with 6 slaves: 1:44
+Run time for 5 x 2 (ec2-medium) with 12 slaves: 1:29
+Run time for 4 x 3 (ec2-large) with 12 slaves: 45:59
+
+2) 
+
+File size total for ec2-medium: 24845750
+File size total for ec2-large: 3776456323
+
+MiB/s for 5 x 2 (ec2-medium) with 6 slaves: 24845750/(60 + 44)/(2^20) = 0.2278
+MiB/s for 5 x 2 (ec2-medium) with 12 slaves: 24845750/(60 + 29)/(2^20) = 0.2662
+MiB/s for 4 x 3 (ec2-large) with 12 slaves: 3776456323/(60*45 + 59)/(2^20) = 1.3054
+
+MB/s for 5 x 2 (ec-2 medium) with 6 slaves: 24845750/(60 + 44)/(10^6) = 0.2389
+MB/s for 5 x 2 (ec-2 medium) with 12 slaves: 24845750/(60 + 44)/(10^6) = 0.2792
+MB/s for 4 x 3 (ec-2 large) with 12 slaves: 3776456323/(60*45 + 59)/(10^6) = 1.3688
+
+3) 
+
+The difference in run time between 12 slaves and 6 slaves was 15 seconds, i.e. 12 slaves was 1.169 times faster (i.e. mean processing rate) than 6 slaves.
+
+There is some improvement from parallelizing, but pretty low in comparison to the extra resources we are using. There is ~16.9% increase in performance (i.e. time) when the number of processors are doubled. This is also in agreement with Amdahl's law that explains why data can only be parallelized upto a certain point: there is always some amount of data that has to be run serially. We observed that running with 12 processors took a longer time to initialize its procedures - this could be due to greater shuffling of data and a longer time required to set up more processors to complete the task.
+
+This is a case of large scaling. Our problem size is fixed since we are operating on the same 5 x 2 board. The only variable here is the number of processors (i.e. slaves) that we are using. Also, the problem size per processor is not the same, hence it cannot be considered a case of weak scaling. 
+
+4)
+
+(0.68 * 13)/()
+
+3.801302073GB
